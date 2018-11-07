@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 
-import { Products } from '../constants/Products';
-import Catalog from './widgets/catalog/Catalog';
+import { PRODUCTS } from '~/src/constants/Products';
+import Catalog from '~src/components/widgets/catalog/Catalog';
 
 export default class CatalogPage extends Component {
   constructor(props) {
@@ -10,7 +10,7 @@ export default class CatalogPage extends Component {
 
   render() {
     return (
-      <Catalog products={Products} />
+      <Catalog products={PRODUCTS} />
     );
   }
 }

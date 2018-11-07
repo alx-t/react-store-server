@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
 
-import ProductCard from './ProductCard';
-import TextBox from './elements/TextBox';
+import ProductCard from '~/src/components/widgets/catalog/ProductCard';
+import TextBox from '~/src/components/widgets/catalog/elements/TextBox';
 
-import styles from './Catalog.css';
+import styles from '~/src/components/widgets/catalog/Catalog.css';
 
 export default class Catalog extends Component {
   constructor(props) {
@@ -13,20 +13,9 @@ export default class Catalog extends Component {
   render() {
     const { products } = this.props;
     const productCards = products.map((product) => {
-      const { id, title, price, imageUrl } = product
-      const cardItem = {
-        image: {
-          alt: 'Oops, no image',
-          src: imageUrl,
-          width: 200,
-          height: 150
-        },
-        title: title,
-        price: price
-      }
       return (
-        <div key={id} className='card-container'>
-          <ProductCard product={cardItem} />
+        <div key={product.id} className='card-container'>
+          <ProductCard product={product} />
         </div>
       );
     });

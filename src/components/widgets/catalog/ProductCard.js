@@ -1,10 +1,10 @@
 import React, { Component } from 'react';
 
-import TextBox from './elements/TextBox';
-import Price from './elements/Price';
-import Image from './elements/Image';
+import TextBox from '~/src/components/widgets/catalog/elements/TextBox';
+import Price from '~/src/components/widgets/catalog/elements/Price';
+import Image from '~/src/components/widgets/catalog/elements/Image';
 
-import styles from './ProductCard.css';
+import styles from '~/src/components/widgets/catalog/ProductCard.css';
 
 export default class ProductCard extends Component {
   constructor(props) {
@@ -12,7 +12,13 @@ export default class ProductCard extends Component {
   }
 
   render() {
-    let { title, price, image } = this.props.product;
+    const { title, price, imageUrl } = this.props.product;
+    const image = {
+        alt: 'Oops, no image',
+        src: imageUrl,
+        width: 200,
+        height: 150
+      };
     return (
         <div className='card'>
           <div className='card-header'>
