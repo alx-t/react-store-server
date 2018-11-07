@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 
-import { PRODUCTS } from '~/src/constants/Products';
-import Catalog from '~src/components/widgets/catalog/Catalog';
+import { PRODUCTS } from '../constants/Products';
+import Catalog from './widgets/catalog/Catalog';
 
 export default class CatalogPage extends Component {
   constructor(props) {

@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-import CatalogPage from '~/src/components/CatalogPage'
+import CatalogPage from './components/CatalogPage'
 
 export default class App extends Component {
   constructor(props) {

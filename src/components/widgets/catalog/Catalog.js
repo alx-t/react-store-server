@@ -1,9 +1,7 @@
 import React, { Component } from 'react';
 
-import ProductCard from '~/src/components/widgets/catalog/ProductCard';
-import TextBox from '~/src/components/widgets/catalog/elements/TextBox';
-
-import styles from '~/src/components/widgets/catalog/Catalog.css';
+import ProductCard from './ProductCard';
+import TextBox from './elements/TextBox';
 
 export default class Catalog extends Component {
   constructor(props) {

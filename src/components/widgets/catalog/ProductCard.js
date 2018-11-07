@@ -1,10 +1,8 @@
 import React, { Component } from 'react';
 
-import TextBox from '~/src/components/widgets/catalog/elements/TextBox';
-import Price from '~/src/components/widgets/catalog/elements/Price';
-import Image from '~/src/components/widgets/catalog/elements/Image';
-
-import styles from '~/src/components/widgets/catalog/ProductCard.css';
+import TextBox from './elements/TextBox';
+import Price from './elements/Price';
+import Image from './elements/Image';
 
 export default class ProductCard extends Component {
   constructor(props) {
