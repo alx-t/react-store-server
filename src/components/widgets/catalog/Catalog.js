@@ -3,6 +3,8 @@ import React, { Component } from 'react';
 import ProductCard from './ProductCard';
 import TextBox from './elements/TextBox';
 
+import style from './Catalog.css';
+
 export default class Catalog extends Component {
   constructor(props) {
     super(props);
@@ -12,7 +14,7 @@ export default class Catalog extends Component {
     const { products } = this.props;
     const productCards = products.map((product) => {
       return (
-        <div key={product.id} className='card-container'>
+        <div key={product.id} style={style.cardContainer}>
           <ProductCard product={product} />
         </div>
       );
@@ -23,7 +25,7 @@ export default class Catalog extends Component {
         <h3>
           <TextBox>Catalog</TextBox>
         </h3>
-        <div className='container'>
+        <div style={style.container}>
           {productCards}
         </div>
       </div>

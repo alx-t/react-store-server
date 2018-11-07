@@ -4,6 +4,8 @@ import TextBox from './elements/TextBox';
 import Price from './elements/Price';
 import Image from './elements/Image';
 
+import style from './ProductCard.css';
+
 export default class ProductCard extends Component {
   constructor(props) {
     super(props);
@@ -18,18 +20,18 @@ export default class ProductCard extends Component {
         height: 150
       };
     return (
-        <div className='card'>
-          <div className='card-header'>
+        <div style={style.card}>
+          <div style={style.cardHeader}>
             <TextBox>{title}</TextBox>
           </div>
-          <div className='card-main'>
+          <div style={style.cardMain}>
             <Image
               alt={image.alt}
               src={image.src}
               width={image.width}
               height={image.height}
             />
-            <div className='main-description'>
+            <div style={style.mainDescription}>
               <Price>{price}</Price>
             </div>
           </div>
