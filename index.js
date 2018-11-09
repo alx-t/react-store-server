@@ -1,21 +1,25 @@
-import React, { Component } from 'react';
-import ReactDOM from 'react-dom';
+const express = require('express');
 
-class App extends Component {
-  constructor(props) {
-    super(props);
-  }
+require("@babel/register");
+require("@babel/polyfill");
 
-  render() {
-    return (
-      <div>
-        Hello, world
-      </div>
-    );
-  }
-}
+const render = require('./render').default;
 
-ReactDOM.render(
-  <App />,
-  document.getElementById('root')
-);
+const app = express();
+
+app.get('/', async (req, res) => {
+  const response = `
+    <!doctype html>
+    <html>
+      <head>
+        <title>React hello</title>
+      </head>
+      <body>
+        <div id='root'>${await render()}</div>
+      </body>
+    </html>
+  `;
+  res.send(response);
+});
+
+app.listen(3007, () => console.log('Server is listening on 3007'));
